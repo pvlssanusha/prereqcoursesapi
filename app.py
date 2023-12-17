@@ -21,6 +21,7 @@ api_url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:ge
 def get_response():
     try:
         coursename = request.get_json().get('coursename')
+        audience=request.get_json().get('audience')
         payload = {
             "contents": [
                 {
@@ -28,7 +29,7 @@ def get_response():
                         {
                             "text": 
                             f'''
-        From the given course {coursename} give the prerequiste courses required to learn that course 
+        From the given course {coursename} give the prerequiste courses required to learn that course for target audience{audience}
             Can you create a table of prerequiste courses for it?
             Give the output in json format as code block:
             {{
