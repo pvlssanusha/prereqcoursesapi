@@ -32,10 +32,8 @@ def get_response():
         From the given course {coursename} give the prerequiste courses required to learn that course for target audience{audience}
             Can you create a table of prerequiste courses for it?
             Give the output in json format as code block:
-            {{
-                
-                "prereqcourses": ["strings"],
-                
+            {{  
+                "prereqcourses": ["String"]  
             }}
             
         '''
